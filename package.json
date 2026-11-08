@@ -1,0 +1,12 @@
+{
+  "name": "kas-kampus-pro",
+  "version": "1.0.0",
+  "description": "Dashboard Manajemen Kas Kelas & Himpunan Pro",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
