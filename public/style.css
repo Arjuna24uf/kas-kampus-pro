@@ -497,3 +497,111 @@ th {
     .form-grid { grid-template-columns: 1fr 1fr; }
     .side-illustration { display: none; }
 }
+
+/* ===== PERBAIKAN TAMPILAN HP (MOBILE RESPONSIVE TOTAL) ===== */
+@media (max-width: 768px) {
+    /* 1. Rombak Layout Utama: Turunkan Main Content ke Bawah Sidebar */
+    .dashboard-wrapper {
+        flex-direction: column;
+    }
+
+    /* 2. Sulap Sidebar Jadi Navbar (Menu Atas/Bawah) */
+    .sidebar {
+        width: 100%;
+        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        z-index: 10;
+    }
+
+    .brand {
+        padding: 0;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .nav-link {
+        padding: 10px 14px;
+    }
+
+    /* Sembunyikan Teks Menu di HP, Sisakan Ikonnya Saja Biar Hemat Tempat */
+    .nav-link span {
+        display: none;
+    }
+
+    .sidebar-footer {
+        padding-top: 0;
+        border-top: none;
+    }
+
+    /* 3. Maksimalkan Ruang Main Content */
+    .main-content {
+        padding: 15px;
+    }
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .topbar-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .hero-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .middle-layout {
+        flex-direction: column;
+    }
+
+    /* 4. Tumpuk Kotak Saldo (1 Kolom) */
+    .stats-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* 5. Tumpuk Form Input & Tombol */
+    .form-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-gradient-red, .btn-cancel {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* 6. Fix Tabel Agar Bisa Di-scroll ke Kanan-Kiri */
+    .glass-panel {
+        padding: 15px;
+    }
+
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        display: block;
+    }
+
+    .side-illustration {
+        display: none;
+    }
+}
